@@ -1,0 +1,30 @@
+//footer styles
+footer{
+    background-color: #8300e82c;
+    color: #fcfcfc;
+    font-size: 0.9rem;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width:$tablet){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        // height: 20vh;
+    }
+
+    section{
+
+        &:nth-last-child(1){
+            line-height: 0;
+            margin: 0;
+            padding: 0;
+            p{
+                &:hover{
+                    color:grey;
+                }
+            }
+        }
+    }
+}

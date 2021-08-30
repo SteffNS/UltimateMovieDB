@@ -1,0 +1,16 @@
+main {
+    section{
+        background-color: #6300ff;
+
+        h2{
+            border-bottom: none;
+            a{
+                text-decoration: none;
+                
+                &:visited{
+                    color:#fcfcfc;
+                }
+            }
+        }
+    }
+}

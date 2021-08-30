@@ -1,0 +1,31 @@
+//Import for Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&family=Inter&display=swap');
+
+
+//Styles
+html{
+  overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Andada Pro', serif;
+}
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #1a1a1a;
+}
+
+p{
+  line-height: 1.5;  
+}
+
+main{
+  @media(min-width:$desktop){
+    max-width: 85em;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,113 @@
+//single movie page styling
+
+.single-movie {
+    background-color: #1a1a1a;
+
+    h2{
+        color: #49fcfc;
+        font-size: 2rem;
+    }
+    h3{
+        border-bottom: 1px solid #5ce1e6;
+        text-align: center;
+        padding-bottom: .5rem;
+    }
+    button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        max-width: 18%;
+        outline:none;
+        border:none;
+        background:none;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.9;
+        }
+        @media(min-width:$tablet){
+            max-width: 6rem;
+        }
+        @media(min-width:$desktop){
+            max-width: 4rem;
+            position: absolute;
+            top:14.5rem;
+            right: 15vw;
+        }
+        @media(min-width:$desktopWide){
+            right:20vw;
+        }
+        @media(min-width:$desktopUltraWide){
+            right: 31vw;
+        }
+    }
+    .movie-stats{
+        background-color: #6000ff;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .movie-genre {
+            justify-content: space-around;
+            p {
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .single-movie-info{
+            padding-top: 1.5rem;
+        }
+
+        div{
+            display: flex;
+            justify-content: space-around;
+            &:first-child{
+                justify-content: space-around;
+            }
+            .movie-tag{
+                font-style: italic;
+                padding: 1.5rem 0;
+                margin: 0 auto;
+            }
+            &:last-child{
+                display: initial;
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @media(min-width:$tablet){
+        .single-movie-poster{
+            margin-bottom: 2rem;
+            
+            img{
+                padding: 0 1rem;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+        }
+        .movie-stats{
+            margin: 0 auto;
+            max-width: 35rem;
+        }
+    }
+
+    @media(min-width:$desktop){
+        .single-movie-content{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .movie-stats{
+            max-width: 40rem;
+            height: fit-content;
+            padding: 1.25rem;
+            margin: 0 1rem;
+        }
+    }
+}

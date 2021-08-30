@@ -1,0 +1,99 @@
+//favourite page styles
+.fav-wrapper{
+    text-align: center;
+    // padding: 2rem 0;
+    h1{
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    @media(min-width:$desktopUltraWide){
+        min-height: 74vh;
+    }
+}
+
+
+.fav-grid{
+    padding: .3rem;
+
+    //media queries for favourite page
+    @media(min-width: $tablet){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+    }
+    @media(min-width:$desktop){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .75rem;
+    }
+    @media(min-width:$desktopWide){
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: .8rem;
+    }
+    //single movie styles in the grid
+    .movie-card{
+        border: 1px solid grey;
+        border-radius: .2rem;
+        background-color: rgba(#3d3d3d, 0.5);
+        margin: .5rem 0;
+
+        &:hover{
+            background-color: #42168a;  
+        }
+
+        @media(min-width:$desktop){
+            margin: 0;
+        }
+
+        h2{
+            padding: 0;
+            font-size: 1.2rem;
+            color:#49fcfc;
+            text-align: center;
+        }
+        img{
+            border-radius: .7rem;
+        }
+        a{
+            color: white;
+            text-align: center;
+            width: 50%;
+            text-decoration: none;
+            background-color: #0F0140;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            &:hover{
+                color: #5ce1e6;
+                background-color: #3B3B3B;
+            }
+        }
+        .movie-poster {
+            a{
+                padding: 0;
+                background-color: initial;
+            }
+        }
+        .home-movie-stats {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+.movie-info {
+    margin: .3rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+        border:none;
+        outline:none;
+        background: none;
+        max-width: 28%;
+    }
+}

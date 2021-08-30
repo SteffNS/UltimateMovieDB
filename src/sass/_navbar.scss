@@ -1,0 +1,85 @@
+//header and navs styling
+header {
+    display: flex;
+    justify-content: space-between;
+    color:#fcfcfc;
+    background-color: #8300e82c ;
+    
+    img {
+        margin: 0 .7rem;
+        padding: 0.65rem 1rem;
+        max-width: 10rem;
+    }
+
+    .nav-bar {
+
+        ul {
+            list-style: none;
+            font-size: 1.2rem;
+
+            @media(min-width:1048px){
+                display: flex;
+                padding: 2rem;
+            }
+
+            li {
+                padding: .35rem 1rem;
+
+                .nav-item{
+                    text-decoration: none;
+                    font-weight: bolder;
+                    padding: .5rem 1rem;
+
+                    &:visited{
+                        color:#fcfcfc;
+                    }
+                    &.active{
+                        color:#7ab3a8;
+                    }
+                    @media(min-width:$desktop){
+                        &:hover{
+                            color:#04ffd1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-sort{
+    padding: .75rem 0;
+    border-bottom: 1px solid #5ce1e6;
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        li{
+            flex:1;
+            margin-right: .25em;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        a{
+            padding: .5rem;
+            display: block;
+            text-decoration: none;
+            color: #00e63a;
+            text-align: center;
+
+            &.active{
+                color: #7ab3a8;
+            }
+            @media(min-width:$desktop){
+                &:hover{
+                    color:#04ffd1;
+                }
+            }
+        }
+    }
+}
