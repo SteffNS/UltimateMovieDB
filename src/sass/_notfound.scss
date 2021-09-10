@@ -1,6 +1,23 @@
 main {
     section{
         background-color: #6300ff;
+        padding-bottom: 0;
+        p{
+            text-align: center;
+        }
+        
+        #link-back{
+            height: 25vh;
+            margin-bottom:11rem;
+            h2 {
+                padding-top: 10rem;
+                a{
+                    &:hover{
+                        color:#04ffd1;
+                    }
+                }
+            }
+        }
 
         h2{
             border-bottom: none;

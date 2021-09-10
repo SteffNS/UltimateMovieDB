@@ -12,9 +12,9 @@ const PageHome = ({sort}) => {
 
 
     const [movieData, setMovieData] = useState(null);
-
-    const globalStateAndglobalActions = useGlobal();
-    const globalState = globalStateAndglobalActions[0];
+    
+	const globalStateAndActions = useGlobal();
+    const globalState = globalStateAndActions[0];
 
     //get movies from the tmdb using api, returns a list of 20, slice out just the first 12
     useEffect(()=>{
@@ -57,7 +57,7 @@ const PageHome = ({sort}) => {
                 </ul>
             </nav>
             <section>
-                {movieData!==null && <MoviesPage movieData={movieData}  isFav={isFav(globalState.favs, null, movieData.id)} />}
+                {movieData!==null && <MoviesPage movieData={movieData} isFav={isFav(globalState.favs, null, movieData.id)} />}
             </section>
         </div>
     )

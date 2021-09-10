@@ -11,8 +11,10 @@ function PageSingle() {
 
     const[movieData, setMovieData] = useState(null);
     const { id } = useParams();
-    const globalStateAndglobalActions = useGlobal();
-    const globalState = globalStateAndglobalActions[0];
+    // const globalStateAndglobalActions = useGlobal();
+    // const globalState = globalStateAndglobalActions[0];
+    const globalStateAndActions = useGlobal();
+    const globalState= globalStateAndActions[0];
 
 
     useEffect(()=>{

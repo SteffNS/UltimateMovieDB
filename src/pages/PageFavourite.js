@@ -5,20 +5,14 @@ import { appTitle } from '../utilities/global';
 import useGlobal from '../store/globalApp';
 import MoviePage from '../components/MoviePage';
 
-
-
-
 function PageFavourite() {
 
-    const globalStateAndActions = useGlobal();
+	const globalStateAndActions = useGlobal();
     const globalState = globalStateAndActions[0];
     
     useEffect(()=>{
         document.title = `${appTitle} - My Favourites`;
     }, []);
-
-
-
 
     return (
         <div className='fav-wrapper'>
@@ -32,9 +26,7 @@ function PageFavourite() {
                             isFav={true} />
                     })}
                 </div>
-                
             }
-
         </div>
     )
 }

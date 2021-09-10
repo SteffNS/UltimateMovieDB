@@ -1,5 +1,6 @@
 //global app state
 
+// import React from 'react';
 import globalHook from 'use-global-hook';
 import { appStorageName } from '../utilities/global';
 
@@ -15,14 +16,12 @@ function getFavs(){
 
 const actions = {
     addFav: (store, movieObj) => {
-
         const newFavs = [...store.state.favs, movieObj];
         const newFavsForStorage = JSON.stringify(newFavs);
         localStorage.setItem(appStorageName, newFavsForStorage);
         store.setState({ favs: newFavs });
     },
     removeFav: (store, id) => {
-
         let currentFavs = store.state.favs;
         const indexOfMovieToRemove = currentFavs.findIndex((movieObj) => movieObj.id === id);
         currentFavs.splice(indexOfMovieToRemove, 1);
@@ -37,5 +36,6 @@ const initialState = {
 }
 
 const useGlobal = globalHook(initialState, actions);
+// const useGlobal = globalHook(React, initialState, actions);
 
 export default useGlobal;

@@ -1,3 +1,5 @@
+//Movie
+
 import { Link } from 'react-router-dom'
 import noPoster from '../images/no-movie-poster.jpg';
 import arrangeDate from '../utilities/arrangeDate';
@@ -6,9 +8,8 @@ import FavButton from './FavButton';
 
 function MovieCard({ movieObj, isFav}) {
 
-
-    const globalStateAndglobalActions = useGlobal();
-    const globalActions = globalStateAndglobalActions[1];
+    const globalStateAndActions = useGlobal();
+    const globalActions= globalStateAndActions[1];
 
     function handleFavClick(addToFav, obj){
         if(addToFav === true){
@@ -17,7 +18,6 @@ function MovieCard({ movieObj, isFav}) {
             globalActions.removeFav(obj.id);
         }   
     }
-
 
     return(
         <div className = 'movie-card'>

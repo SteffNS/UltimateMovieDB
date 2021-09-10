@@ -6,8 +6,12 @@ import arrangeDate from '../utilities/arrangeDate';
 
 function SingleMovieComponent({ movieObj, isFav }) {
 
-    const globalStateAndglobalActions = useGlobal();
-    const globalActions = globalStateAndglobalActions[1];
+    // const globalStateAndglobalActions = useGlobal();
+    // const globalActions = globalStateAndglobalActions[1];
+    // const globalStateAndActions = useGlobal();
+    // const globalActions = globalStateAndActions[1];
+    const globalStateAndActions = useGlobal();
+    const globalActions = globalStateAndActions[1];
 
     function handleFavClick(addToFav, obj){
         if(addToFav === true){
@@ -26,7 +30,7 @@ function SingleMovieComponent({ movieObj, isFav }) {
     return(
         <section className = 'single-movie'>
             <h2>{movieObj.title}</h2>
-            <div className="single-movie-content">
+            <div className="single-movie-content" style = {{backgroundImage: `URL(https://image.tmdb.org/t/p/original/${movieObj.backdrop_path})`,backgroundSize: 'cover'}}>
                 <div className="single-movie-poster">
                     <img src={`https://image.tmdb.org/t/p/w500/${movieObj.poster_path}`} alt={movieObj.title} />
                 </div>
