@@ -28,7 +28,7 @@ function PageFavourite() {
             { globalState.favs.length === 0 ? 
                 <p style={{height:'34vh', marginTop: '15rem'}}>No favourites, go add some favourites!</p> : 
                 <div className='fav-grid'>
-                    {globalState.favs.map((singleMovie, i) => {
+                    {ready && globalState.favs.map((singleMovie, i) => {
                         return <MoviePage key = {i} 
                             movieObj = {singleMovie} 
                             isFav={isFav(globalState.favs, null, singleMovie.id)} />
