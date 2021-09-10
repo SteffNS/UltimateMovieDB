@@ -13,10 +13,12 @@ import PageFavourite from './pages/PageFavourite.js'
 import PageNotFound from './pages/PageNotFound.js'
 import PageSingle from "./pages/PageSingle";
 
+import { APP_FOLDER_NAME } from "./utilities/global";
+
 
 function App() {
   return (
-    <Router>
+    <Router basename={APP_FOLDER_NAME}>
       <div className="app-wrapper">
         <Header />
         <main>
